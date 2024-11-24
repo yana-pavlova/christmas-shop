@@ -1,0 +1,17 @@
+:root {
+  --primary-color: #FF4646;
+  --primary-color-shadowed: rgba(255, 70, 70, 0.1);
+  --dark-color: #181C29;
+  --static-white-color: #FFFFFF;
+  --static-white-color-shadowed: rgba(255, 255, 255, 0.4);
+  --active-tab-color: rgba(255, 255, 255, 0.2);
+  --content-background-color: #ECF3F8;
+  --tag-purple-color: #4361FF;
+  --tag-pink-color: #FF43F7;
+  --tag-green-color: #06A44F;
+  --primary-font-family: Montserrat, sans-serif;
+  --accent-font-family: Allura, cursive;
+  --bold-font: 600;
+  --regular-font: 400;
+  --corner-radius: 20px;
+}
