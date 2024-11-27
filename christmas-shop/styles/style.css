@@ -22,6 +22,7 @@
 }
 
 .nav a {
+  display: block;
   padding: 12px 20px;
   border-radius: 12px;
   transition: color 0.3s ease, background-color 0.3s ease;
@@ -35,7 +36,71 @@
 
 .burger-menu {
   display: none;
-  padding-inline-end: 8px;
+  position: relative;
+  inline-size: 21px;
+  block-size: 21px;
+  cursor: pointer;
+}
+
+#icon {
+  position: relative;
+  top: -3px;
+  right: calc(50% + 7px);
+  block-size: 100%;
+}
+
+.burger-menu-lines, .burger-menu-lines::before, .burger-menu-lines::after  {
+  position: absolute;
+  display: block;
+  inline-size: 100%;
+  left: 0;
+  transition: 0.3s;
+  background: var(--dark-color);
+}
+
+.burger-menu-lines::before, .burger-menu-lines::after {
+  content: '';
+  block-size: 2px;
+  transform-origin: 2px center;
+}
+
+.burger-menu-lines::before {
+  top: 8px;
+}
+
+.burger-menu-lines::after {
+  top: 16px;
+}
+
+.close-icon .burger-menu-lines::before,
+.close-icon .burger-menu-lines::after {
+  top: 12px;
+  transform-origin: 50% 50%;
+}
+
+.close-icon .burger-menu-lines::before {
+  transform: rotate3d(0, 0, 1, 45deg);
+}
+
+.close-icon .burger-menu-lines::after {
+  transform: rotate3d(0, 0, 1, -45deg);
+}
+
+.wide-menu {
+  position: absolute;
+  top: 64px;
+  inline-size: 100%;
+  block-size: calc(100vh - 64px);
+  background-color: var(--static-white-color);
+  transform-origin: right center;
+}
+.wide-menu .nav {
+  block-size: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .main {
@@ -98,6 +163,7 @@
 }
 
 .slider {
+  position: relative;
   overflow: hidden;
   padding: 60px 0;
   flex-direction: column;
@@ -108,12 +174,14 @@
 }
 
 .slider-container {
+  position: relative;
   align-self: flex-start;
   display: flex;
   align-items: center;
   gap: 20px;
   block-size: 200px;
-  padding: 10px 0 0 85px;
+  padding: 10px 85px 0;
+  transition: transform 0.3s ease-in-out;
 }
 
 .slider-image {
@@ -145,7 +213,7 @@
 }
 
 .slider-button:disabled {
-  cursor: not-allowed;
+  cursor: default;
   color: var(--static-white-color-shadowed);
   border-color: var(--static-white-color-shadowed);
   background-color: transparent;

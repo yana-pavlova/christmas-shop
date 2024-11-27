@@ -150,3 +150,14 @@ section {
 .nav-active-link:hover, .nav-active-tab:hover {
   cursor: default;
 }
+
+.hidden-to-right {
+  position: absolute;
+  transform: scale(0, 1);
+  transition: transform 0.3s ease-in-out, scale 0.3s ease-in-out;
+}
+
+.slide-from-right {
+  transform: scale(1, 1);
+  transition: transform 0.3s ease-in-out, scale 0.3s ease-in-out;
+}

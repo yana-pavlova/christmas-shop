@@ -22,7 +22,17 @@
       </ul>
     </nav>
     <nav class="burger-menu">
-      <img src="./images/burger.svg" alt="Icon of a burger menu">
+      <div id="icon">
+        <span class="burger-menu-lines"></span>
+      </div>
+    </nav>
+    <nav class="wide-menu hidden-to-right">
+      <ul class="nav action-large">
+        <li><a href="./pages/gifts.html">Gifts</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gifts">Best</a></li>
+        <li><a href="#footer">Contacts</a></li>
+      </ul>
     </nav>
   </header>
 
@@ -60,8 +70,8 @@
         <img src="./images/fairytale-house.png" alt="Fairy house" class="slider-image corners-rounded">
       </div>
       <div class="slider-buttons">
-        <button disabled class="slider-button">←</button>
-        <button class="slider-button">→</button>  
+        <button disabled id="slider-button-left" class="slider-button">←</button>
+        <button id="slider-button-right" class="slider-button">→</button>  
       </div>
     </section>
     <section id="gifts" class="gifts">
@@ -166,5 +176,7 @@
     </div>
 
   </footer>
+
+  <script defer src="./scripts/script.js"></script>
 </body>
 </html>
