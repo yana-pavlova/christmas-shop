@@ -307,6 +307,7 @@
 }
 
 .cta-timer {
+  position: relative;
   inline-size: 320px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -319,28 +320,28 @@
 }
 
 .cta-time {
-  position: relative;
   font-size: 24px;
 }
 
-.cta-timer-days::after, .cta-timer-minutes::after {
+.cta-timer-days::after, .cta-timer-minutes::after, .cta-timer-hours::after {
   position: absolute;
   content: '';
   width: 1px;
-  height: 130%;
+  height: 20px;
+  top: 21px;
   background-color: var(--static-white-color-shadowed);
-  left: 175%;
-  top: 30%;
+}
+
+.cta-timer-days::after {
+  left: 91px;
 }
 
 .cta-timer-hours::after {
-  position: absolute;
-  content: '';
-  width: 1px;
-  height: 130%;
-  background-color: var(--static-white-color-shadowed);
-  left: 320%;
-  top: 30%;
+  left: 171px;
+}
+
+.cta-timer-minutes::after {
+  left: 251px
 }
 
 .footer {
