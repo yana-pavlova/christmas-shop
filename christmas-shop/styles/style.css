@@ -31,7 +31,6 @@
 .nav a:hover {
   color: var(--primary-color);
   background-color: var(--primary-color-shadowed);
-  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .burger-menu {
@@ -209,7 +208,6 @@
 .slider-button:hover {
   color: var(--primary-color);
   background-color: var(--static-white-color);
-  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .slider-button:disabled {
@@ -261,7 +259,6 @@
 
 .gift:hover h3 {
   color: var(--primary-color);
-  transition: color 0.3s ease;
 }
 
 .gift img {
@@ -354,7 +351,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 60px;
+  gap: 62px;
   padding: 65px 0;
 }
 
@@ -363,6 +360,14 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+.footer-contacts li {
+  transition: color 0.3s ease;
+}
+
+.footer-contacts li:hover {
+  color: var(--primary-color);
 }
 
 .footer-contacts a {
@@ -380,8 +385,16 @@
 .footer-socials {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   text-align: center;
+  gap: 10px;
+}
+
+.footer-socials a {
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: var(--primary-color);
 }
 
 .socials {
@@ -390,9 +403,14 @@
   gap: 12px;
 }
 
-.socials li {
+.socials svg {
   cursor: pointer;
   padding: 8px;
+  transition: stroke 0.3s ease;
+}
+
+.socials li:hover svg {
+  stroke: var(--primary-color);
 }
 
 /* GIFTS PAGE */
@@ -454,7 +472,7 @@
 
 @media screen and (max-width: 767px) {
   .about {
-    padding: 106px 0 0
+    padding: 57px 0 0
   }
   .about-container {
     block-size: auto;
@@ -468,7 +486,7 @@
     inline-size: 100%;
   }
   .about-text {
-    padding: 7px 0 0 20px;
+    padding: 57px 0 0 20px;
   }
   .slider {
     padding: 118px 0 59px;
@@ -480,7 +498,7 @@
     padding-block-start: 138px;
   }
   .footer {
-    padding: 97px 0 60px;
+    padding: 98px 0 60px;
   }
   .footer-contacts a {
     min-inline-size: 250px;
@@ -490,8 +508,5 @@
   }
   .main-gifts .nav-active-tab {
     padding: 12px 5px;
-  }
-  .footer {
-    padding: 65px 0 60px;
   }
 }
