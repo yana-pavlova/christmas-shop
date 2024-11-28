@@ -114,6 +114,52 @@ setInterval(() => {
   seconds.textContent = data.seconds * -1;
 }, 1000);
 
+// RANDOM GIFTS CARDS
+async function loadGiftsData() {
+  const res = await fetch('../data/gifts-data.json');
+  const data = await res.json();
+  
+  return data;
+};
+
+const giftsData = await loadGiftsData();
+
+const imagesTypes = {
+  'forhealth': './images/gift-for-health.png',
+  'forharmony': './images/gift-for-harmony.png',
+  'forwork': './images/gift-for-work.png'
+}
+
+const labelClasses = {
+  'forhealth': 'health-text',
+  'forharmony': 'harmony-text',
+  'forwork': 'work-text'
+}
+
+const getRandomGift = () => {
+  const randomInt = Math.floor(Math.random() * giftsData.length);
+  
+  return giftsData[randomInt];
+}
+
+const giftCards = document.querySelectorAll('.gift');
+giftCards.forEach((card) => {
+  const title = card.querySelector('h3');
+  const label = card.querySelector('span');
+  const pic = card.querySelector('img');
+
+  const randomGift = getRandomGift();
+  const category = randomGift.category.toLowerCase().replace(/\s/g, '');
+
+  title.textContent = randomGift.name;
+  label.textContent = randomGift.category;
+  label.classList.add(labelClasses[category]);
+  pic.src = imagesTypes[category];
+
+  card.classList.toggle('hidden');
+  card.classList.toggle('loaded');
+});
+
 // WINDOW LISTENERS
 window.addEventListener('resize', () => {
   if(window.innerWidth > 768 && icon.classList.contains('close-icon')) {

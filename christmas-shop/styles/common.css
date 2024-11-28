@@ -151,6 +151,10 @@ section {
   cursor: default;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 .hidden-to-right {
   position: absolute;
   transform: scale(0, 1);
@@ -160,4 +164,12 @@ section {
 .slide-from-right {
   transform: scale(1, 1);
   transition: transform 0.3s ease-in-out, scale 0.3s ease-in-out;
+}
+
+.gift {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+.loaded {
+  opacity: 1;
 }
