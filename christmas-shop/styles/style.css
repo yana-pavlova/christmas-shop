@@ -28,11 +28,6 @@
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.nav a:hover {
-  color: var(--primary-color);
-  background-color: var(--primary-color-shadowed);
-}
-
 .burger-menu {
   display: none;
   position: relative;
@@ -205,11 +200,6 @@
   cursor: pointer;
 }
 
-.slider-button:hover {
-  color: var(--primary-color);
-  background-color: var(--static-white-color);
-}
-
 .slider-button:disabled {
   cursor: default;
   color: var(--static-white-color-shadowed);
@@ -254,10 +244,6 @@
 
 .gift h3 {
   transition: color 0.3s ease;
-}
-
-.gift:hover h3 {
-  color: var(--primary-color);
 }
 
 .gift img {
@@ -365,10 +351,6 @@
   transition: color 0.3s ease;
 }
 
-.footer-contacts li:hover {
-  color: var(--primary-color);
-}
-
 .footer-contacts a {
   min-inline-size: 378px;
   display: flex;
@@ -392,10 +374,6 @@
   transition: color 0.3s ease;
 }
 
-.footer-socials a:hover {
-  color: var(--primary-color);
-}
-
 .socials {
   display: flex;
   justify-content: center;
@@ -406,10 +384,6 @@
   cursor: pointer;
   padding: 8px;
   transition: stroke 0.3s ease;
-}
-
-.socials li:hover svg {
-  stroke: var(--primary-color);
 }
 
 /* GIFTS PAGE */
@@ -432,11 +406,6 @@
 .main-gifts h1 {
   inline-size: calc(364px + (426 - 364) * ((100vw - 380px)) / (1440 - 380));
   text-align: center;
-}
-
-.main-gifts nav a:hover {
-  color: var(--static-white-color);
-  background-color: var(--active-tab-color);
 }
 
 /* QUERIES */
@@ -516,5 +485,38 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (hover: hover) {
+  .nav a:hover {
+    color: var(--primary-color);
+    background-color: var(--primary-color-shadowed);
+  }
+
+  .slider-button:hover {
+    color: var(--primary-color);
+    background-color: var(--static-white-color);
+  }
+
+  .gift:hover h3 {
+    color: var(--primary-color);
+  }
+
+  .footer-contacts li:hover {
+    color: var(--primary-color);
+  }
+
+  .footer-socials a:hover {
+    color: var(--primary-color);
+  }
+
+  .socials li:hover svg {
+    stroke: var(--primary-color);
+  }
+
+  .main-gifts nav a:hover {
+    color: var(--static-white-color);
+    background-color: var(--active-tab-color);
   }
 }

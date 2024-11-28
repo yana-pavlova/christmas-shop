@@ -89,12 +89,6 @@ section {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.primary-button:hover {
-  background-color: var(--static-white-color);
-  color: var(--dark-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
 .curly-text {
   font-family: var(--accent-font-family);
   font-size: 24px;
@@ -149,10 +143,6 @@ section {
   transition: background-color 0.3s ease;
 }
 
-.nav-active-link:hover, .nav-active-tab:hover {
-  cursor: default;
-}
-
 .hidden {
   visibility: hidden;
 }
@@ -166,4 +156,16 @@ section {
 .slide-from-right {
   transform: scale(1, 1);
   transition: transform 0.3s ease-in-out, scale 0.3s ease-in-out;
+}
+
+@media (hover: hover) {
+  .primary-button:hover {
+    background-color: var(--static-white-color);
+    color: var(--dark-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .nav-active-link:hover, .nav-active-tab:hover {
+    cursor: default;
+  }
 }
