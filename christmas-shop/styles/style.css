@@ -233,6 +233,10 @@
   gap: 12px;
 }
 
+.gifts-gallery li {
+  animation: fadeInUp 0.7s ease;
+}
+
 .gifts-gallery h3 {
   color: var(--dark-color);
 }
@@ -242,15 +246,10 @@
   flex-direction: column;
   inline-size: 310px;
   min-block-size: 342px;
-  opacity: 0;
   transition: opacity 0.3s ease-in;
   background-color: var(--content-background-color);
   border-radius: var(--corner-radius);
   cursor: pointer;
-}
-
-.gift.loaded {
-  opacity: 1;
 }
 
 .gift h3 {
@@ -508,5 +507,14 @@
   }
   .main-gifts .nav-active-tab {
     padding: 12px 5px;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

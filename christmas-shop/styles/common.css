@@ -140,11 +140,13 @@ section {
 
 .nav-active-tab {
   background-color: var(--active-tab-color);
+  transition: background-color 0.3s ease;
 }
 
 .nav-active-link {
   background-color: var(--primary-color-shadowed);
   color: var(--primary-color);
+  transition: background-color 0.3s ease;
 }
 
 .nav-active-link:hover, .nav-active-tab:hover {
