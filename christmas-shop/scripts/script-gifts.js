@@ -64,3 +64,19 @@ navTabs.forEach(tab => {
     
   }
 })
+
+// SCROLL UP BUTTON
+const scrollUpBtn = document.querySelector('.scrollToTop');
+
+scrollUpBtn.onclick = () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 299 && window.innerWidth < 767) {
+    scrollUpBtn.classList.add('scrollToTopVisible');
+  } else {
+    scrollUpBtn.classList.remove('scrollToTopVisible');
+  }
+});

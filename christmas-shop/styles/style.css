@@ -1,3 +1,5 @@
+/* TODO сделать кнолпки на слайдере disabled */
+
 @import './styles/variables.css';
 
 .header {
@@ -384,6 +386,24 @@
   cursor: pointer;
   padding: 8px;
   transition: stroke 0.3s ease;
+}
+
+.scrollToTop {
+  inline-size: 56px;
+  block-size: 56px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  background-color: var(--static-white-color);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.scrollToTopVisible {
+  opacity: 1;
 }
 
 /* GIFTS PAGE */

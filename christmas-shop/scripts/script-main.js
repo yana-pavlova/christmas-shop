@@ -129,5 +129,5 @@ randomGiftCards.forEach((card) => {
 
 // WINDOW LISTENERS
 window.addEventListener('resize', () => {
-  resetSliderPosition();
+  if(sliderContainer) resetSliderPosition();
 });
