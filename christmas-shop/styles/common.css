@@ -8,7 +8,7 @@ html {
   color: var(--dark-color);
 }
 
-body, ul, h1, h2, h3, p {
+body, ul, h1, h2, h3, h4, p {
   margin: 0;
   padding: 0;
 }
@@ -19,7 +19,7 @@ body {
   margin: auto;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   text-transform: uppercase;
   font-weight: var(--bold-font);
 }
@@ -145,6 +145,10 @@ section {
 
 .hidden {
   visibility: hidden;
+}
+
+.vanished {
+  opacity: 0;
 }
 
 .hidden-to-right {

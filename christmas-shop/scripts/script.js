@@ -35,3 +35,13 @@ window.addEventListener('resize', () => {
     body.style.overflow = 'auto';
   }
 });
+
+const modal = document.querySelector('.modal');
+const modalClose = document.querySelector('.modal-close');
+const overlay = document.querySelector('.overlay');
+
+modalClose.onclick = () => {
+  modal.classList.add('vanished');
+  overlay.classList.add('hidden');
+  body.style.overflow = modal.classList.contains('hidden') ? 'auto' : 'hidden';
+};

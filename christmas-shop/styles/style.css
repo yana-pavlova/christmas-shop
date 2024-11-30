@@ -409,7 +409,7 @@
 /* GIFTS PAGE */
 
 .main-gifts {
-  gap: 31px;
+  gap: 20px;
   padding: 60px 0;
   background-image: url('../images/bg-garland.svg');
   background-color: var(--primary-color);
@@ -426,6 +426,132 @@
 .main-gifts h1 {
   inline-size: calc(364px + (426 - 364) * ((100vw - 380px)) / (1440 - 380));
   text-align: center;
+}
+
+/* MODAL */
+
+.modal {
+  position: absolute;
+  z-index: 100;
+  max-inline-size: 400px;
+  inline-size: calc(364px + (400 - 364) * ((100vw - 380px)) / (768 - 380));
+  block-size: 514px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 250px 1fr;
+  align-items: center;
+  background-color: var(--content-background-color);
+  border-radius: var(--corner-radius);
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.modal-close {
+  z-index: 10;
+  inline-size: 30px;
+  block-size: 30px;
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-close::before, .modal-close::after {
+  content: "";
+  position: absolute;
+  block-size: 100%;
+  inline-size: 2px;
+  top: 0;
+  left: 50%;
+  translate: -50% 0;
+  border-radius: 1px;
+  background-color: var(--dark-color);
+  transition: background-color 0.3s ease;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-img {
+  inline-size: 100%;
+  position: relative;
+  top: -10px;
+}
+
+.modal-card {
+  block-size: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: var(--corner-radius);
+  background-color: var(--static-white-color);
+}
+
+.modal-card-description {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modal-card-text {
+  line-height: 1.48;
+}
+
+.modal-card-review {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-card-table-heading {
+  line-height: 1.3;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.05rem;
+}
+
+.modal-card-table {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.modal-card-table li {
+  display: grid;
+  grid-template-columns: calc(100% - 165px) 1fr 2fr;
+}
+
+.modal-card-table-review {
+  display: flex;
+  gap: 12px;
+}
+
+.modal-card-table-review img {
+  inline-size: 12px;
+}
+
+/* OVERLAY */
+
+.overlay {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: var(--dark-color);
+  opacity: 0.8;
 }
 
 /* QUERIES */
@@ -538,5 +664,9 @@
   .main-gifts nav a:hover {
     color: var(--static-white-color);
     background-color: var(--active-tab-color);
+  }
+
+  .modal-close:hover::before, .modal-close:hover::after {
+    background-color: var(--primary-color);
   }
 }
