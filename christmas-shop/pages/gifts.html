@@ -48,116 +48,6 @@
     </nav>
 
     <ul class="gifts-gallery">
-      <li>
-        <a class="gift" href="#">
-          <img src="../images/gift-for-work.png" alt="New year decoration">
-          <article class="gift-text">
-            <span class="small-text work-text uppercased">For work</span>
-            <h3>Console.log Guru</h3>  
-          </article>  
-        </a>
-      </li>
-      <li>
-        <a class="gift" href="#">
-          <img src="../images/gift-for-health.png" alt="New year decoration">
-          <article class="gift-text">
-            <span class="small-text health-text uppercased">For health</span>
-            <h3>Step master</h3>  
-          </article>
-        </a>
-      </li>
-      <li>
-        <a class="gift" href="#">
-          <img src="../images/gift-for-work.png" alt="New year decoration">
-          <article class="gift-text">
-            <span class="small-text work-text uppercased">For work</span>
-            <h3>Bug magnet</h3>  
-          </article>  
-        </a>
-      </li>
-      <li>
-        <a class="gift" href="#">
-          <img src="../images/gift-for-work.png" alt="New year decoration">
-          <article class="gift-text">
-            <span class="small-text work-text uppercased">For work</span>
-            <h3>Shortcut Cheater</h3>  
-          </article>  
-        </a>
-      </li>
-
-      <li>
-        <a class="gift" href="#">
-          <img src="../images/gift-for-health.png" alt="New year decoration">
-          <article class="gift-text">
-            <span class="small-text health-text uppercased">For health</span>
-            <h3>Posture Levitation</h3>  
-          </article>
-        </a>
-      </li>
-      <li>
-        <a class="gift" href="#">
-          <img src="../images/gift-for-harmony.png" alt="New year decoration">
-          <article class="gift-text">
-            <span class="small-text harmony-text uppercased">For harmony</span>
-            <h3>Bug Acceptance Guru</h3>
-          </article>
-        </a>
-      </li>
-      <li>
-        <a class="gift" href="#">
-          <img src="../images/gift-for-health.png" alt="New year decoration">
-          <article class="gift-text">
-            <span class="small-text health-text uppercased">For health</span>
-            <h3>Snack Resister</h3>  
-          </article>
-        </a>
-      </li>
-      <li>
-        <a class="gift" href="#">
-          <img src="../images/gift-for-harmony.png" alt="New year decoration">
-          <article class="gift-text">
-            <span class="small-text harmony-text uppercased">For harmony</span>
-            <h3>Error Laugher</h3>
-          </article>
-        </a>
-      </li>
-
-      <li>
-        <a class="gift" href="#">
-          <img src="../images/gift-for-health.png" alt="New year decoration">
-          <article class="gift-text">
-            <span class="small-text health-text uppercased">For health</span>
-            <h3>Hydration Bot</h3>  
-          </article>
-        </a>
-      </li>
-      <li>
-        <a class="gift" href="#">
-          <img src="../images/gift-for-work.png" alt="New year decoration">
-          <article class="gift-text">
-            <span class="small-text work-text uppercased">For work</span>
-            <h3>Merge Master</h3>
-          </article>
-        </a>
-      </li>
-      <li>
-        <a class="gift" href="#">
-          <img src="../images/gift-for-harmony.png" alt="New year decoration">
-          <article class="gift-text">
-            <span class="small-text harmony-text uppercased">For harmony</span>
-            <h3>Joy Charger</h3>
-          </article>
-        </a>
-      </li>
-      <li>
-        <a class="gift" href="#">
-          <img src="../images/gift-for-harmony.png" alt="New year decoration">
-          <article class="gift-text">
-            <span class="small-text harmony-text uppercased">For harmony</span>
-            <h3>Spontaneous Coding Philosopher</h3>
-          </article>
-        </a>
-      </li>
     </ul>
   </main>
 
@@ -218,11 +108,53 @@
 
   </footer>
 
+  <div class="modal vanished">
+    <button class="modal-close"></button>
+    <img class="modal-img" alt="Image of a Christmas tree decoration">
+    <article class="modal-card">
+      <div class="modal-card-description">
+        <span class="small-text uppercased"></span>
+        <h3 class="modal-card-title"></h3>
+        <p class="modal-card-text"></p>  
+      </div>
+      <div class="modal-card-review">
+        <h4 class="modal-card-table-heading">Adds superpowers to:</h4>
+        <ul class="modal-card-table">
+          <li>
+            <span class="modal-card-table-row-title">Live</span>
+            <span class="live-score modal-card-table-scores"></span>
+            <span class="live-review modal-card-table-review">
+            </span>
+          </li>
+          <li>
+            <span class="modal-card-table-row-title">Create</span>
+            <span class="create-score modal-card-table-scores"></span>
+            <span class="create-review modal-card-table-review">
+            </span>
+          </li>
+          <li>
+            <span class="modal-card-table-row-title">Love</span>
+            <span class="love-score modal-card-table-scores"></span>
+            <span class="love-review modal-card-table-review">
+            </span>
+          </li>
+          <li>
+            <span class="modal-card-table-row-title">Dream</span>
+            <span class="dream-score modal-card-table-scores"></span>
+            <span class="dream-review modal-card-table-review">
+            </span>
+          </li>
+        </ul>  
+      </div>
+    </article>
+  </div>
+
+  <div class="overlay hidden"></div>
+
   <button class="scrollToTop">
     <img src="../images/arrow-up.svg" alt="Стрелка вверх">
   </button>
 
   <script type="module" defer src="../scripts/script.js"></script>
-  <script type="module" defer src="../scripts/script-gifts.js"></script>
 </body>
 </html>

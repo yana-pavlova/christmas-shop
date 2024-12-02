@@ -1,6 +1,4 @@
-/* TODO сделать кнолпки на слайдере disabled */
-
-@import './styles/variables.css';
+@import '/styles/variables.css';
 
 .header {
   max-inline-size: 1274px;
@@ -200,13 +198,6 @@
   background-color: transparent;
   transition: color 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
-}
-
-.slider-button:disabled {
-  cursor: default;
-  color: var(--static-white-color-shadowed);
-  border-color: var(--static-white-color-shadowed);
-  background-color: transparent;
 }
 
 .gifts {
@@ -431,11 +422,10 @@
 /* MODAL */
 
 .modal {
-  position: absolute;
-  z-index: 100;
+  position: fixed;
   max-inline-size: 400px;
   inline-size: calc(364px + (400 - 364) * ((100vw - 380px)) / (768 - 380));
-  block-size: 514px;
+  min-block-size: 514px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -643,6 +633,13 @@
   .slider-button:hover {
     color: var(--primary-color);
     background-color: var(--static-white-color);
+  }
+
+  .slider-button:disabled {
+    cursor: default;
+    color: var(--static-white-color-shadowed);
+    border-color: var(--static-white-color-shadowed);
+    background-color: transparent;
   }
 
   .gift:hover h3 {

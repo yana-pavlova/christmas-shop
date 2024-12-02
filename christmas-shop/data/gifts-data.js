@@ -1,4 +1,4 @@
-[
+export const giftsData = [
   {
     "name": "Bug Magnet",
     "description": "Able to find bugs in code like they were placed there on purpose.",
