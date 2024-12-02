@@ -12,10 +12,14 @@ export const labelClasses = {
 
 const giftHTML = (imgSrc, label, category, title) => {
   console.log(imgSrc.slice(1));
+  console.log(window.location.hostname);
+  
+  const serverPath = window.location.hostname + '/christmas-shop' + imgSrc.slice(1);
+  // 'https://rolling-scopes-school.github.io/yana-pavlova-JSFE2024Q4/christmas-shop/images/gift-for-health.png'
   
   return `
     <a class="gift">
-    <img src=${imgSrc.slice(1)}>
+    <img src=${serverPath}>
     <article class="gift-text">
       <span class="small-text ${label} uppercased">
         ${category}
