@@ -1,5 +1,3 @@
-const isHomePage = window.location.href.includes('gifts') ? false : true;
-
 export const imagesTypes = {
   'forhealth': './images/gift-for-health.png',
   'forharmony': './images/gift-for-harmony.png',
@@ -13,10 +11,11 @@ export const labelClasses = {
 }
 
 const giftHTML = (imgSrc, label, category, title) => {
-  const imgPrefix = isHomePage ? '' : '../';
+  console.log(imgSrc.slice(1));
+  
   return `
     <a class="gift">
-    <img src=${imgPrefix + imgSrc}>
+    <img src=${imgSrc.slice(1)}>
     <article class="gift-text">
       <span class="small-text ${label} uppercased">
         ${category}
