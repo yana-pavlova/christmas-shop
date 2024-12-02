@@ -1,7 +1,5 @@
 import { imagesTypes, labelClasses} from './utils.js';
 
-const pathPrefix = window.location.href.includes('gifts') ? '../' : '';
-
 const body = document.querySelector('body');
 const modal = document.querySelector('.modal');
 const modalTitle = modal.querySelector('.modal-card-title');
@@ -40,7 +38,7 @@ export const openModal = (cardData) => {
   modalLoveScore.textContent = love;
   modalCreateScore.textContent = create;
   modalDreamScore.textContent = dream;
-  modalImg.src = pathPrefix + imagesTypes[categoryKey];
+  modalImg.src = imagesTypes[categoryKey];
 
   appendStars(liveReview, live[1]);
   appendStars(loveReview, love[1]);
@@ -69,7 +67,7 @@ export const closeModal = () => {
 
 const getReviewNode = () => {
   const img = document.createElement('img'); 
-  img.src = pathPrefix + 'images/review-star.svg'; 
+  img.src = 'images/review-star.svg'; 
   img.alt = 'Star icon'; 
   
   return img; 
@@ -77,7 +75,7 @@ const getReviewNode = () => {
 
 const getShadowedStarNode = () => {
   const img = document.createElement('img'); 
-  img.src = pathPrefix + 'images/review-star-shadowed.svg'; 
+  img.src = 'images/review-star-shadowed.svg'; 
   img.alt = 'Shadowed star icon'; 
 
   return img; 
