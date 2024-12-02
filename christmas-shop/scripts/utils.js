@@ -1,4 +1,4 @@
-const pathPrefix = window.location.href.includes('gifts') ? '.' : '';
+const pathPrefix = window.location.href.includes('gifts') ? '../' : '';
 
 export const imagesTypes = {
   'forhealth': './images/gift-for-health.png',
@@ -13,6 +13,8 @@ export const labelClasses = {
 }
 
 const giftHTML = (imgSrc, label, category, title) => {
+  console.log('UTILS', pathPrefix + imgSrc);
+  
   return `
     <a class="gift">
     <img src=${pathPrefix + imgSrc}>
