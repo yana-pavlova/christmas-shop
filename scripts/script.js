@@ -209,3 +209,20 @@ if(!isHomePage) {
     }
   });
 }
+
+if (window.matchMedia("(hover: none)").matches) {
+  document.addEventListener('gesturestart', (e) => e.preventDefault(), { passive: false });
+  document.addEventListener('dblclick', (e) => e.preventDefault(), { passive: false });
+
+  let lastTap = 0;
+  document.addEventListener('touchend', function(event) {
+    const currentTime = new Date().getTime();
+    const tapLength = currentTime - lastTap;
+    
+    if (tapLength < 300 && tapLength > 0) {
+      event.preventDefault(); 
+    }
+    
+    lastTap = currentTime;
+});
+}
