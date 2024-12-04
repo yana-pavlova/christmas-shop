@@ -15,7 +15,8 @@ const hours = body.querySelector('.cta-timer-hours');
 const minutes = body.querySelector('.cta-timer-minutes');
 const seconds = body.querySelector('.cta-timer-seconds');
 
-const newYearDate = new Date('2025-01-01');
+const currYear = new Date().getFullYear();
+const newYearDate = new Date(currYear + 1, 0, 1);
 
 const burgerMenuIcon = body.querySelector('#icon');
 const wideMenu = body.querySelector('.wide-menu');
@@ -107,15 +108,15 @@ if (isHomePage) {
 // TIMER
 if(isHomePage) {
   setInterval(() => {
-  const d = new Date();
-  const diff = (d.getTime() - newYearDate.getTime()) / 1000;
-  const data = calculateTimeDifference(diff);
-  
-  days.textContent = data.days * -1;
-  hours.textContent = data.hours * -1;
-  minutes.textContent = data.minutes * -1;
-  seconds.textContent = data.seconds * -1;
-}, 1000)
+    const d = new Date();
+    const diff = (d.getTime() - newYearDate.getTime()) / 1000;
+    const data = calculateTimeDifference(diff);
+    
+    days.textContent = data.days * -1;
+    hours.textContent = data.hours * -1;
+    minutes.textContent = data.minutes * -1;
+    seconds.textContent = data.seconds * -1;
+  }, 1000)
 };
 
 // GIFTS
