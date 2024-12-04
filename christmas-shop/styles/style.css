@@ -635,13 +635,6 @@
     background-color: var(--static-white-color);
   }
 
-  .slider-button:disabled {
-    cursor: default;
-    color: var(--static-white-color-shadowed);
-    border-color: var(--static-white-color-shadowed);
-    background-color: transparent;
-  }
-
   .gift:hover h3 {
     color: var(--primary-color);
   }
@@ -667,3 +660,11 @@
     background-color: var(--primary-color);
   }
 }
+
+.slider-button:disabled {
+  cursor: default;
+  color: var(--static-white-color-shadowed);
+  border-color: var(--static-white-color-shadowed);
+  background-color: transparent;
+}
+
