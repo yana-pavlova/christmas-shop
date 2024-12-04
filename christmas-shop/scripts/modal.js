@@ -48,9 +48,6 @@ export const openModal = (cardData) => {
   modal.classList.remove('vanished');
   overlay.classList.remove('hidden');
   modal.classList.add('appeared');
-
-  console.log('MODAL', imagesTypes[categoryKey]);
-  
 }
 
 export const closeModal = () => {
